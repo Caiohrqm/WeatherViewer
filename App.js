@@ -29,7 +29,7 @@ export default function App() {
         };
         setBackground(backgroundImages[data.desc]);
         setWeather(data);
-        setLocation("");
+        setLocation();
       })
       .catch((e) => {
         console.error(e);
@@ -38,7 +38,7 @@ export default function App() {
 
   return (
     <Background source={background || backgroundImages["Clouds"]}>
-      <StatusBar translucent backgroundColor="transparent" />
+      <StatusBar backgroundColor="#000" />
       <Container>
         <Title>{weather?.city || ""}</Title>
         <Subtitle>{weather?.desc || ""}</Subtitle>
