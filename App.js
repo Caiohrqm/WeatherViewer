@@ -29,7 +29,7 @@ export default function App() {
         };
         setBackground(backgroundImages[data.desc]);
         setWeather(data);
-        setLocation();
+        setLocation("");
       })
       .catch((e) => {
         console.error(e);
